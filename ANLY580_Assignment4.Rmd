@@ -63,7 +63,19 @@ boxplot(iris$Sepal.Length~iris$Species,col=topo.colors(3)) #Box plots with three
 
 ```
 
-## Ying	Dong
+## Ying Dong
+Below is my example of using the FeaturePlot function in the "caret" package to create a feature plot for the IRIS dataset using the first four numeric columns as the continuous data and the fifth species column as the classification factor. 
+
+The plot is created using the IRIS dataset and featureplot function from Caret package. This plot is used to show the visualizaed relationship for each of the numerical columns among different species. 
+
+```{r}
+library(caret)
+data(iris)
+featurePlot(x=iris[,1:4], #  a matrix of continuous data
+            y=iris[,5], # a factor indicating class membership
+            plot="pairs", # the type of plot
+            auto.key=list(columns=3)) # a type(3 classes)
+```
 ## Rui	Fan
 ## Sukanyaraj	Govindaraaj
 ## Kan	Hui
