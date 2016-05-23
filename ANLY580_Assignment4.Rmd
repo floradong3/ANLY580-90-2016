@@ -64,6 +64,19 @@ boxplot(iris$Sepal.Length~iris$Species,col=topo.colors(3)) #Box plots with three
 ```
 
 ## Ying	Dong
+```{r}
+data(mtcars)
+x <- mtcars$mpg 
+ h<-hist(x, # data to be plotted for frequency distribution
+         breaks=10, # berak points to have for the bar charts
+         col="red", 
+         xlab="Miles Per Gallon", 
+          main="Histogram with Normal Curve") 
+ xfit<-seq(min(x),max(x),length=40) # adding a trend line to the histogram
+ yfit<-dnorm(xfit,mean=mean(x),sd=sd(x)) 
+ yfit <- yfit*diff(h$mids[1:2])*length(x) 
+ lines(xfit, yfit, col="blue", lwd=2)
+```
 ## Rui	Fan
 ## Sukanyaraj	Govindaraaj
 ## Kan	Hui
