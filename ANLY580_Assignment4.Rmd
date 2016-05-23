@@ -64,6 +64,19 @@ boxplot(iris$Sepal.Length~iris$Species,col=topo.colors(3)) #Box plots with three
 ```
 
 ## Ying	Dong
+The code below is my example of a heatmap using the mtcars dataset. A heatmap is a graphical representation of data where the individual values contained in a matrix are represented by colors. 
+The heatmap function contains different options to show the color schemes used to show the degree of the car characteristics by model. 
+```{r}
+data(mtcars)
+heatmap(as.matrix(mtcars), # numeric matrix of values to be plotted
+Rowv=NA,  # determines if and how the row dendrogram should be computed and reordered
+Colv=NA,  # determines if and how the column dendrogram should be computed and reordered
+col = heat.colors(256), #type of color to be used in the heatmap
+scale="column", #character indicating if the values should be centered and scaled in either the row direction or the column direction, or none. 
+margins=c(2,8), #numeric vector of length 2 containing the margins (see par(mar = *)) for column and row names, respectively.
+main = "Car characteristics by Model")  
+```
+
 ## Rui	Fan
 ## Sukanyaraj	Govindaraaj
 ## Kan	Hui
